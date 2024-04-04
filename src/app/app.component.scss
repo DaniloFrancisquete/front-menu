@@ -2,7 +2,7 @@
 .header-content {
     text-align: center;
     background-image: url('/assets/lojas-02.png');
-    background-position: center center; /* Centraliza a imagem vertical e horizontalmente */
+    background-position: center center; 
     background-size: cover; 
     width: 100%;
     height: 420px;
@@ -72,6 +72,104 @@
     margin-bottom: 64px;
     grid-template-columns: 1;
   }
+
+  .imagen-container{
+    position: relative;
+    display: inline-block; 
+  }
+
+ 
+  .container-instagram{
+    position: relative;
+    margin-left: 93%;
+  }
+.img-instagram{
+    height: 60px;
+    margin-top: 10px;
+    margin-right: 10px;
+    display: block;
+}
+
+.container-buscar{
+  background-color: white;
+  color: #CBD5E1;
+    padding-left: 30px;
+    padding-top: 9px;
+    border-radius: 11px;
+    margin-top: 20px;
+    width: 54%;
+    margin-left: 22%;
+    border: solid;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.text-buscar{
+  color:#CBD5E1;
+  font-weight: 500;
+  font-size: 16px;
+
+}
+.icon-buscar{
+  color:#CBD5E1;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.container-categorias{
+  display: flex;
+}
+
+.borde-botton{
+  background-color: #F93372;
+    padding-left: 30px;
+    padding-top: 9px;
+    border-radius: 11px;
+    margin-top: 20px;
+    width: 12%;
+    margin-left: 10%;
+    display: flex;
+    align-items: center;
+}
+
+.borde-botton-cinza{
+  background-color:#E5E5E5;
+  padding-left: 30px;
+  padding-top: 9px;
+  border-radius: 11px;
+  margin-top: 20px;
+  width: 12%;
+  margin-left: 10%;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.text-categorias-black{
+  color:black;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.text-categorias{
+  color:white;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.pi-circle-fill{
+  font-size: 10px;
+}
+  .pi-plus-circle {
+    position: absolute;
+    bottom: 50px;
+    right: 25px;
+    color: #959393;
+    font-size: 24px;
+    background-color: white;
+    border-radius: 18px 18px 19px 18px;
+}
+
   .gruop-img{
     display: flex;
     gap: 79px;
@@ -80,7 +178,7 @@
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     height: 166px;
     width: 100%;
-   
+    margin-bottom:15px;
   }
 
   .group-text{
@@ -93,6 +191,7 @@
     border-radius: 6px;
     margin-top: 10px;
     margin-right: 10px;
+    display: block;
   }
 
     .container-price{
@@ -121,25 +220,22 @@
     color: white;
   }
 
-  
-  .container-footer{
-    width: 100%;
-    background-color: rgb(239,68,68);
-    padding-top: 8px;
-    padding-bottom: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    bottom: 0px;
-  }
-
-  .btn-fooder{
+   .container-carinho{
     display: flex;
     align-items: center;
     gap: 8px;
-    color: white;
-    font-weight: 700;
-    background-color: rgb(239,68,68);
-    border: none;
+    background-color: #F93371;
+    width: 100%;
+    height: 6%;
+    bottom: 0px;
+    position: fixed; 
+    left: 0; 
+    z-index: 999;
+    border: 0;
+    
   }
-  
+
+  .btn-carinho{
+    color: white;
+    margin: auto;
+  }
