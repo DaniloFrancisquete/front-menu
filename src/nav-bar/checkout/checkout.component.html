@@ -1,1 +1,245 @@
-<p>checkout works!</p>
+
+<mat-stepper class="container-stepper" #stepper>
+    
+    <mat-step errorMessage="Name is required.">
+       
+
+        <ng-template matStepLabel>Contato</ng-template>
+        <mat-form-field class="container-name">
+            <mat-label>Nome</mat-label>
+            <input matInput placeholder="Insina seu Nome">
+        </mat-form-field>
+
+        <mat-form-field class="container-telefone">
+            <mat-label>Telefone</mat-label>
+            <span matTextPrefix>+55 &nbsp;</span>
+            <input type="tel" matInput placeholder="(43)9.981340-5560" />
+            <mat-icon matSuffix>mode_edit</mat-icon>
+        </mat-form-field>
+
+
+        <hr style="margin-top: 258px; margin-bottom: 10px; border-top: 1px solid #8b8b8b;">
+        <div class="container-Subtotal">
+            <p>SubTotal</p>
+            <p>R$15,00</p>
+        </div>
+        <div class="container-total">
+            <strong>
+                <p>Total</p>
+            </strong>
+            <strong>
+                <p>R$15,00</p>
+            </strong>
+        </div>
+
+        <div>
+            <button class="button-continue" mat-button matStepperNext>Continuar</button>
+        </div>
+
+    </mat-step>
+
+    <mat-step >
+        <div class="container-deliveries">
+        <ng-template matStepLabel>Entrega</ng-template>
+
+        <label id="example-radio-group-label">Tipo de entrega</label>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group"
+            [(ngModel)]="favoriteSeason">
+            @for (season of seasons; track season) {
+            <mat-radio-button class="example-radio-button" [value]="season">{{season}}</mat-radio-button>
+            }
+        </mat-radio-group>
+
+        <div class="container-choice">
+           <i class="pi pi-info-circle"></i><p class="text-deliveries">Escolha o tipo de entrega!</p>
+        </div>
+    </div>
+    
+
+        <hr style="margin-top: 234px; margin-bottom: 10px; border-top: 1px solid #8b8b8b;">
+        <div class="container-Subtotal">
+            <p>SubTotal</p>
+            <p>R$15,00</p>
+        </div>
+        <div class="container-total">
+            <strong>
+                <p>Total</p>
+            </strong>
+            <strong>
+                <p>R$15,00</p>
+            </strong>
+        </div>
+
+       
+        <div>
+            <button class="button-continue" mat-button matStepperNext>Continuar</button>
+        </div>
+
+
+   
+    </mat-step>
+
+    <mat-step>
+
+        <ng-template matStepLabel>Agendamento</ng-template>
+
+        <div>
+            <p>Go to a different step to see the error state</p>
+            <button mat-button matStepperPrevious>Back</button>
+        </div>
+
+        <div>
+            <button class="button-continue" mat-button matStepperNext>Continuar</button>
+        </div>
+
+
+
+    </mat-step>
+
+    <mat-step>
+
+        <ng-template matStepLabel>Pagamento</ng-template>
+        <mat-accordion>
+            <mat-expansion-panel hideToggle>
+                <!-- #enddocregion hide-toggle -->
+                    <mat-expansion-panel-header>
+                    <mat-radio-button  value="1"></mat-radio-button> <mat-panel-title>
+                        Pix
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <p>Realizar Transfência para chave pix:</p>
+                    <p>4399813205065(João Pereira Silva Neto(Nubamk))</p>
+                    <p>Enviar o comprovante da Transfência para loja após o pagamento</p>
+                  </mat-expansion-panel>  
+        </mat-accordion>
+
+        <mat-card class="container-payment">
+            <div class="card-payment">
+            <mat-card-content>Débito</mat-card-content><mat-radio-button class="checkout-payment"  value="1"></mat-radio-button>
+            </div>  
+        </mat-card>
+
+        <mat-card class="container-payment">
+            <div class="card-payment">
+            <mat-card-content>Crédito</mat-card-content><mat-radio-button class="checkout-payment" value="1"></mat-radio-button>
+            </div>  
+        </mat-card>
+
+        <mat-card class="container-payment">
+            <div class="card-payment">
+            <mat-card-content>Dinheiro</mat-card-content><mat-radio-button class="checkout-payment" value="1"></mat-radio-button>
+            </div>  
+        </mat-card>
+
+        <hr style="margin-top: 230px; margin-bottom: 10px; border-top: 1px solid #8b8b8b;">
+        <div class="container-Subtotal">
+            <p>SubTotal</p>
+            <p>R$15,00</p>
+        </div>
+        <div class="container-total">
+            <strong>
+                <p>Total</p>
+            </strong>
+            <strong>
+                <p>R$15,00</p>
+            </strong>
+        </div>
+
+        <div>
+            <button class="button-continue" mat-button matStepperNext>Continuar</button>
+        </div>
+
+
+    </mat-step>
+
+    <mat-step>
+        <ng-template matStepLabel>Resumo</ng-template>
+
+        <h1 style="text-align: center;">Resumo do Pedido</h1>
+
+        <strong><p>Itens</p></strong>
+        <div class="container-geral">
+        <div class="container-new">
+            <div class="product-items">
+              <p><strong>1 X</strong> Moda da Casa</p> <strong>R$15,00</strong>
+            </div>
+            <div class="product-items-replic">
+              <p><strong>1 X</strong> 300ml(R$15,00)</p>
+            </div>
+          </div>
+          <button class="button-Edit">EDITAR</button>
+        </div>
+        
+
+          <strong><p>Contato</p></strong>
+          <div class="container-geral">
+          <div class="container-items-name ">
+            <i class="pi pi-user"></i>
+              <div class="product-name">
+                <p><strong>João Felipe Lopes</strong></p>
+                <div>
+                    <p>(43)9.9865-7090</p>
+                </div>
+              </div>
+            </div>
+            <button class="button-Edit">EDITAR</button>
+            </div>
+
+            <strong><p>Endereço</p></strong>
+         <div class="container-geral">
+          <div class="container-new">
+              <div class="product-address">
+                <i class="pi pi-map-marker "></i><p><strong>Nelso Ravagna,512 - casa</strong></p>
+              </div>
+            </div>
+            <button class="button-Edit">EDITAR</button>
+            </div>
+
+            <strong><p>Pagamento</p></strong>
+            <div class="container-geral">
+            <div class="container-new">
+              <div class="product-credt">
+                <p><strong>Crédito</strong></p><i class="pi pi-credit-card"></i>
+              </div>
+            </div>
+            <button class="button-Edit">EDITAR</button>
+            </div>
+
+            <mat-form-field class="container-name">
+                <mat-label>Cupom de Desconto*</mat-label>
+                <input matInput placeholder="Insina o Cupom">
+            </mat-form-field>
+        
+
+            <div class="cupom">
+            <h1>ATIVAR CUPOM</h1>
+            <p>Ao enviar seu pedido,você concorda com os <strong>Termos de Serviços e Politica de Uso de Dados </strong> da CodeExpress e do estabelecimento </p>
+            </div>
+
+            <div class="container-finalizer">
+            <hr style="margin-bottom: 10px; border-top: 1px solid #8b8b8b;">
+            <div class="container-Subtotal">
+                <p>SubTotal</p>
+                <p>R$15,00</p>
+            </div>
+            <div class="container-Subtotal">
+                <p>Taxa de entrega</p>
+                <p>R$4,00</p>
+            </div>
+            <div class="container-total">
+                <strong>
+                    <p>Total</p>
+                </strong>
+                <strong>
+                    <p>R$15,00</p>
+                </strong>
+            </div>
+            </div>
+        
+
+        <div>
+            <button class="button-continue" mat-button matStepperNext>Finalizar</button>
+        </div>
+
+    </mat-step>
+</mat-stepper>

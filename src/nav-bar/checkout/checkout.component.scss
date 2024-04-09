@@ -1,0 +1,210 @@
+.container-stepper{
+    background-color: #F5F5F5;
+}
+
+.button-continue{
+display: flex;
+align-items: center;
+gap: 8px;
+background-color: #E5E5E5;
+width: 100%;
+height: 6%;
+bottom: 0px;
+position: fixed; 
+left: 0; 
+z-index: 999;
+border: 0;
+color: white !important;
+}
+
+.container-name {
+    width: 1300px !important; 
+    margin-left: 10px;
+    margin-left: 70px;
+    margin-top: 19px;
+}
+.container-telefone{
+    width: 1300px !important; 
+    margin-left: 10px;
+    margin-left: 70px;
+    margin-top: 43px;  
+}
+.container-Subtotal{
+    display: flex;
+    justify-content: space-between;
+}
+.container-total{
+    display: flex;
+    justify-content: space-between;
+}
+
+.example-radio-group {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+    align-items: flex-start;
+    
+  }
+  
+  .example-radio-button {
+    margin: 5px;
+  }
+
+  .container-choice {
+    background-color: rgba(217,236,249);
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 2px;
+    border-radius: 8px;
+    margin-top: 20px;
+    width: 50%;
+    display: flex;
+  }
+
+  .text-deliveries{
+    color: black;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .container-deliveries{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-left: 338px;
+  }
+
+  .container-deliveries label{
+    color: red;
+  }
+
+  .container-payment{
+    margin-top: 20px;
+    padding: 5px 0px 10px;
+  }
+  .card-payment{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .checkout-payment{
+    margin-right: 30px;
+  }
+
+  .container-new {
+    border:  #dfdada solid;
+    margin-bottom: 35px;
+    width: 80%;
+  }
+  .container-items-name{
+    border:  #dfdada solid;
+    margin-bottom: 35px;
+    display: flex;
+    width: 80%;
+  }
+
+  .product-items{
+    color: black;
+    margin-left: 21px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 18px;
+  }
+
+  .product-address{
+    display: flex;
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 18px;
+    color: black;
+    margin-left: 21px;
+  }
+
+  .product-address i{
+    font-size: 27px;
+    margin-right: 10px;
+  }
+
+  .product-credt{
+    display: flex;
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 18px;
+    color: black;
+    margin-left: 21px;
+  }
+
+  .product-credt i{
+    font-size: 22px;
+    margin-left: 10px;
+  }
+.product-items-replic{
+  margin-left: 21px;
+  margin-right: 10px;
+  color: black;
+}
+.product-name{
+  color: black;
+    margin-left: 21px;
+    display: block;
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 18px;
+    line-height: 0.9;
+    width: 80%;
+}
+
+.container-items-name i{
+    font-size: 34px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.cupom{
+    text-align: center;
+}
+.cupom h1{
+    color: #F93371; 
+}
+.container-finalizer{
+    margin-bottom: 10px;
+}
+
+.container-choice i{
+  margin-right: 13px;
+  font-size: 22px;
+  color: #3B82F6;
+}
+.container-geral{
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-Edit{
+  width: 97px;
+  height: 45px;
+  border-radius: 5px;
+  background: #F93371;
+  border: 0px;
+  margin-right: 10%;
+  margin-top: 21px;
+  color: white;
+  
+}
+
+:host::ng-deep .mat-mdc-radio-button.mat-accent {
+  --mdc-radio-disabled-selected-icon-color: black;
+  --mdc-radio-disabled-unselected-icon-color: black;
+  --mdc-radio-unselected-hover-icon-color: #212121;
+  --mdc-radio-unselected-icon-color: rgba(0, 0, 0, 0.54);
+  --mdc-radio-unselected-pressed-icon-color: rgba(0, 0, 0, 0.54);
+  --mdc-radio-selected-focus-icon-color: #1d4ed8;
+  --mdc-radio-selected-hover-icon-color: #1d4ed8;
+  --mdc-radio-selected-icon-color: #1d4ed8;
+  --mdc-radio-selected-pressed-icon-color: #1d4ed8;
+  --mat-radio-ripple-color: black;
+  --mat-radio-checked-ripple-color: #1d4ed8;
+  --mat-radio-disabled-label-color: rgba(0, 0, 0, 0.38);
+}
