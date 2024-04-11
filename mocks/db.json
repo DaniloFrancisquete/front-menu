@@ -1,0 +1,47 @@
+{
+  "company": {
+    "id": 1,
+    "name": "Sávio Sorvetes",
+    "address": {
+      "street": "Av Higienópolis",
+      "number": "560",
+      "neighborhood": "Centro",
+      "city": "Londrina",
+      "state": "PR"
+    }
+  },
+  "productsByCategory": {
+    "categories": [
+      {
+        "name": "AÇAI ESPECIAIS",
+        "products": [
+          {
+            "id": 1,
+            "title": "Moda da Casa",
+            "description": "Açai, leite em pó, leite condensado, creme de avelã, confete, morango e banana."
+          },
+          {
+            "id": 2,
+            "title": "Moda da Casa 2",
+            "description": "Açai, leite em pó, leite condensado, creme de avelã, confete, morango e banana."
+          }
+        ]
+      },
+      {
+        "name": "AÇAI Normal",
+        "products": [
+          {
+            "id": 1,
+            "title": "Normal",
+            "description": "Açai, leite em pó, leite condensado, creme de avelã, confete, morango e banana."
+          },
+          {
+            "id": 2,
+            "title": "Normal 2",
+            "description": "Açai, leite em pó, leite condensado, creme de avelã, confete, morango e banana."
+          }
+        ]
+      }
+    ]
+  }
+}
