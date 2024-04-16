@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { CompanyService } from '../../app/services/company.service';
 import { ModalPedidoComponent } from '../../app/shared/modal-pedido/modal-pedido.component';
+import { ProductService } from '../../app/services/product.service';
 
 @Component({
   selector: 'app-home',
@@ -28,20 +29,36 @@ import { ModalPedidoComponent } from '../../app/shared/modal-pedido/modal-pedido
 })
 export class HomeComponent implements OnInit {
   company: any;
+  productsByCategory: any;
 
   constructor(
     private companyService: CompanyService,
-    public dialog: MatDialog
+    private productService: ProductService,
+    public dialog: MatDialog,
+
   ) {}
 
   async ngOnInit() {
     await this.getCompanyInfo();
+    await this.getProductInfo();
   }
   async getCompanyInfo() {
     this.company = await this.companyService.getCompany();
   }
 
+  async getProductInfo() {
+    this.productsByCategory = await this.productService.getProducts();
+  
+  }
+
   openDialog() {
     this.dialog.open(ModalPedidoComponent, {});
   }
+
+ 
+
+  
+
+ 
+
 }

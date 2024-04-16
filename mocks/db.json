@@ -1,13 +1,20 @@
 {
   "company": {
     "id": 1,
-    "name": "Sávio Sorvetes",
+    "name": "Juliana Modas",
     "address": {
-      "street": "Av Higienópolis",
+      "street": "Av Belo Horizonte",
       "number": "560",
       "neighborhood": "Centro",
-      "city": "Londrina",
-      "state": "PR"
+      "city": "Porecatu",
+      "state": "PR",
+      "week":"Seg á Dom",
+      "time":"18:00 as 22:00",
+      "delivery":"20-45min",
+      "order":"Mínimo R$10,00",
+      "more":"Ver mais"
+
+      
     }
   },
   "productsByCategory": {
@@ -18,27 +25,71 @@
           {
             "id": 1,
             "title": "Moda da Casa",
-            "description": "Açai, leite em pó, leite condensado, creme de avelã, confete, morango e banana."
+            "description": "Açai, leite em pó, leite condensado, creme de avelã, confete, morango e banana.",
+            "value":"a partir de R$16,00",
+            "img":"assets/0000734f-34a6-46a6-bccb-28692ec2b5f4-medium.jpg"
           },
           {
             "id": 2,
             "title": "Moda da Casa 2",
-            "description": "Açai, leite em pó, leite condensado, creme de avelã, confete, morango e banana."
+            "description": "Açai, leite em pó, leite condensado, creme de avelã, confete, morango e banana.",
+            "value":"a partir de R$16,00",
+            "img":"assets/0000734f-34a6-46a6-bccb-28692ec2b5f4-medium.jpg"
+          },
+          {
+            "id": 3,
+            "title": "Moda da Casa 2",
+            "description": "Açai, leite em pó, leite condensado, creme de avelã, confete, morango e banana.",
+            "value":"a partir de R$16,00",
+            "img":"assets/0000734f-34a6-46a6-bccb-28692ec2b5f4-medium.jpg"
+          },
+          {
+            "id": 4,
+            "title": "Moda da Casa 2",
+            "description": "Açai, leite em pó, leite condensado, creme de avelã, confete, morango e banana.",
+            "value":"a partir de R$16,00",
+            "img":"assets/0000734f-34a6-46a6-bccb-28692ec2b5f4-medium.jpg"
           }
         ]
       },
       {
-        "name": "AÇAI Normal",
+        "name": "AÇAI (MONTE DO SEU JEITO)",
         "products": [
           {
             "id": 1,
             "title": "Normal",
-            "description": "Açai, leite em pó, leite condensado, creme de avelã, confete, morango e banana."
+            "description": "Açai, leite em pó, leite condensado, creme de avelã, confete, morango e banana.",
+            "value":"a partir de R$16,00",
+            "img":"assets/0000734f-34a6-46a6-bccb-28692ec2b5f4-medium.jpg"
+         
           },
           {
             "id": 2,
             "title": "Normal 2",
-            "description": "Açai, leite em pó, leite condensado, creme de avelã, confete, morango e banana."
+            "description": "Açai, leite em pó, leite condensado, creme de avelã, confete, morango e banana.",
+            "value":"a partir de R$16,00",
+            "img":"assets/0000734f-34a6-46a6-bccb-28692ec2b5f4-medium.jpg"
+            
+          }
+        ]
+      },
+      {
+        "name": "BEBIDAS GELADAS",
+        "products": [
+          {
+            "id": 1,
+            "title": "Normal",
+            "description": "Açai, leite em pó, leite condensado, creme de avelã, confete, morango e banana.",
+            "value":"a partir de R$16,00",
+            "img":"assets/0000734f-34a6-46a6-bccb-28692ec2b5f4-medium.jpg"
+          },
+          {
+            "id": 2,
+            "title": "Normal 2",
+            "description": "Açai, leite em pó, leite condensado, creme de avelã, confete, morango e banana.",
+            "value":"a partir de R$16,00",
+            "img":"assets/0000734f-34a6-46a6-bccb-28692ec2b5f4-medium.jpg"
+            
           }
         ]
       }
