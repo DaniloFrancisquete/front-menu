@@ -81,56 +81,16 @@
  
   
   <div class="container-categorias" >
-    <div class="borde-botton" *ngFor="let itemCategory of productsByCategory.categories; let i=index">
+    <div class="borde-botton" *ngFor="let category of categoriesTitle; let i=index" [ngClass]="{'selected': i === selectedCategoryIndex}" (click)="onCategoria(i)">
       <div class="text-categorias">
-      <p>{{itemCategory.name}}</p>
+      <p>{{ category.name}}</p>
       </div>
+
     </div>
     </div>
 
-  
- <!--
-  <div class="container-categorias">
-    <div class="borde-botton">
-      <div class="text-categorias">
-    <p>  AÇAI ESPECIAIS</p>
-      </div>
-    </div>
 
-    <div class="borde-botton-cinza">
-      <div class="text-categorias-black">
-        <p>AÇAI ESPECIAIS</p>
-      </div>
-    </div>
-
-    <div class="borde-botton-cinza">
-      <div class="text-categorias-black">
-        <p>AÇAI ESPECIAIS</p>
-      </div>
-    </div>
-
-    <div class="borde-botton-cinza">
-      <div class="text-categorias-black">
-        <p>AÇAI ESPECIAIS</p>
-      </div>
-    </div>
-
-    <div class="borde-botton-cinza">
-      <div class="text-categorias-black">
-        <p>AÇAI ESPECIAIS</p>
-      </div>
-    </div>
-
-    <div class="borde-botton-cinza">
-      <div class="text-categorias-black">
-        <p>AÇAI ESPECIAIS</p>
-      </div>
-    </div>
-  </div>
- -->
-
-
-  <div *ngFor="let itemCategory of productsByCategory.categories; let i=index">
+  <div *ngFor="let itemCategory of productsByCategory?.categories; let i=index">
     <h2 class="h2-text">{{itemCategory.name}}</h2>
   <div class="container-main">
     <div class="row">
@@ -148,7 +108,7 @@
           </div>
 
           <div class="imagen-container">
-            <i class="pi pi-plus-circle" (click)="openDialog()"></i>
+            <i class="pi pi-plus-circle" (click)="openDialog(itemCategory.id, itemProduct.id)"></i>
             <img [src]="itemProduct.img" alt="Imagem do produto" class="img-produt" />
             <!--
             <img

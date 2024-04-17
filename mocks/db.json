@@ -20,6 +20,7 @@
   "productsByCategory": {
     "categories": [
       {
+        "id":1,
         "name": "AÇAI ESPECIAIS",
         "products": [
           {
@@ -31,17 +32,17 @@
           },
           {
             "id": 2,
-            "title": "Moda da Casa 2",
-            "description": "Açai, leite em pó, leite condensado, creme de avelã, confete, morango e banana.",
-            "value":"a partir de R$16,00",
-            "img":"assets/0000734f-34a6-46a6-bccb-28692ec2b5f4-medium.jpg"
+            "title": "Tropical",
+            "description": "Açai,canela, creme de avelã, confete, morango e banana.",
+            "value":"a partir de R$18,00",
+            "img":"assets/857f9a5ece01583d358e4edacb1e50d5.jpg"
           },
           {
             "id": 3,
-            "title": "Moda da Casa 2",
-            "description": "Açai, leite em pó, leite condensado, creme de avelã, confete, morango e banana.",
-            "value":"a partir de R$16,00",
-            "img":"assets/0000734f-34a6-46a6-bccb-28692ec2b5f4-medium.jpg"
+            "title": "Ovomaltine",
+            "description": "Açai,ovomaltine,creme de avelã,morango e leite condensado.",
+            "value":"a partir de R$19,00",
+            "img":"assets/c3817ef5-5c4d-4840-8ea6-70fb120a4253-medium.jpg"
           },
           {
             "id": 4,
@@ -53,42 +54,60 @@
         ]
       },
       {
+        "id":2,
         "name": "AÇAI (MONTE DO SEU JEITO)",
         "products": [
           {
             "id": 1,
-            "title": "Normal",
-            "description": "Açai, leite em pó, leite condensado, creme de avelã, confete, morango e banana.",
-            "value":"a partir de R$16,00",
-            "img":"assets/0000734f-34a6-46a6-bccb-28692ec2b5f4-medium.jpg"
+            "title": "Tigela 300ml",
+            "description": "Escolha seus adicionais",
+            "value":"a partir de R$7,00",
+            "img":"assets/mamirtapequena.jpg"
          
           },
           {
             "id": 2,
-            "title": "Normal 2",
-            "description": "Açai, leite em pó, leite condensado, creme de avelã, confete, morango e banana.",
-            "value":"a partir de R$16,00",
-            "img":"assets/0000734f-34a6-46a6-bccb-28692ec2b5f4-medium.jpg"
+            "title": "Tigela Grande",
+            "description": "Escolha seus adicionais.",
+            "value":"a partir de R$10,00",
+            "img":"assets/marmitagrnade.jpg"
+            
+          },
+          {
+            "id": 2,
+            "title": "Copo 240ml",
+            "description": "Escolha seus adicionais.",
+            "value":"a partir de R$5,00",
+            "img":"assets/copoacai.jpg"
             
           }
         ]
       },
       {
+        "id":3,
         "name": "BEBIDAS GELADAS",
         "products": [
           {
             "id": 1,
-            "title": "Normal",
-            "description": "Açai, leite em pó, leite condensado, creme de avelã, confete, morango e banana.",
-            "value":"a partir de R$16,00",
-            "img":"assets/0000734f-34a6-46a6-bccb-28692ec2b5f4-medium.jpg"
+            "title": "Coca-Cola 200ml",
+            "description": "",
+            "value":"a partir de R$2,00",
+            "img":"assets/cocapequena.jpg"
           },
           {
             "id": 2,
-            "title": "Normal 2",
-            "description": "Açai, leite em pó, leite condensado, creme de avelã, confete, morango e banana.",
-            "value":"a partir de R$16,00",
-            "img":"assets/0000734f-34a6-46a6-bccb-28692ec2b5f4-medium.jpg"
+            "title": "Agua sem gás",
+            "description": "",
+            "value":"a partir de R$2,90",
+            "img":"assets/agua.jpg"
+            
+          },
+          {
+            "id": 2,
+            "title": "Refligerante 2l",
+            "description": "",
+            "value":"a partir de R$12",
+            "img":"assets/guarara.jpg"
             
           }
         ]
