@@ -7,4 +7,4 @@ para usar: json-server --watch mocks/db.json
 
 # FrontMenu
 
-ng s
+Rodar projeto: npm start
