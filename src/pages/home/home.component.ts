@@ -35,7 +35,7 @@ export class HomeComponent implements OnInit {
   categoriesTitle: { id: number, name: string}[] = [];
   selectedCategoryIndex: number = -1;
   
-
+  cartItemCount: number = 0;
   
   onCategoria(index: number): void {
    
@@ -112,16 +112,26 @@ export class HomeComponent implements OnInit {
           id: selectedCategory.id,
             title: selectedCategory.title, 
             description: selectedCategory.description
+            
          }
         }
      });
 
+     
+     dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        this.cartItemCount += result.quantity;
+      }
+    });
+  
+    
    
      dialogRef.afterClosed().subscribe(result => {
        console.log('O modal foi fechado', result);
      });
    }
  }
+ 
 
 
 }

@@ -33,6 +33,7 @@
 
   .icon-more{
     margin-top: 18px;
+    cursor: pointer;
   }
   .custom-input{
       border: 1px solid #ccc; 
@@ -94,16 +95,29 @@ margin-top: 10px;
   width: 168px;
 }
 
+
+.container-add{
+  display: flex;
+}
 .button-number{
   background-color: #F93371;
-  border-radius: 5px;
   border: 0;
   color: white;
-  margin-left: 10px;
-  margin-right: 10px;
-  height: 35px;
-  width: 168px;
-  display: flex;
-  text-align: center;
-  justify-content: space-between;
+  padding: 6px 30px;
+  border-radius: 5px 0px 0px 5px;
 }
+.button-number2{
+  background-color: #F93371;
+  border: 0;
+  color: white;
+  padding: 6px 30px;
+  border-radius: 0px 5px 5px 0px;
+}
+
+.button-quanty {
+  background-color: #F93371;
+  border: 0;
+  color: white;
+  padding: 6px 30px;
+}
+

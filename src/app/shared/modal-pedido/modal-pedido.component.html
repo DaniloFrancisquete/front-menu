@@ -12,77 +12,23 @@
 
             <div class="container-choice">
                 <div class="text-size">
-                    <p>Escolha O TAMANHO</p>
-                    <p>Escolha 1 opção</p>
+                    <p>{{ data.selectedProduct.size }}</p>
+                    <p>{{ data.selectedProduct.option }}</p>
                 </div>
                 <div class="button-mandatory">
-                    <button>Obrigatório</button>
+                    <button>{{ data.selectedProduct.mandatory}}</button>
                 </div>
             </div>
 
             <div  class="container-options">
-                <div class="options-1">
+                <div *ngFor="let option of data.selectedProduct.options" class="options-1">
                     <div>
-                        <p>300ml</p>
-                        <p>R$15,00</p>
+                        <p>{{ option.ml }}</p>
+                        <p>{{ option.valueml  }}</p>
                     </div>
 
                     <div class="icon-more">
-                        <i class="pi pi-plus"></i>
-                    </div>
-                </div>
-
-                <div class="options-1">
-                    <div>
-                        <p>300ml</p>
-                        <p>R$15,00</p>
-                    </div>
-
-                    <div class="icon-more">
-                        <i class="pi pi-plus"></i>
-                    </div>
-                </div>
-
-                <div class="options-1">
-                    <div>
-                        <p>300ml</p>
-                        <p>R$15,00</p>
-                    </div>
-
-                    <div class="icon-more">
-                        <i class="pi pi-plus"></i>
-                    </div>
-                </div>
-                <div class="options-1">
-                    <div>
-                        <p>300ml</p>
-                        <p>R$15,00</p>
-                    </div>
-
-                    <div class="icon-more">
-                        <i class="pi pi-plus"></i>
-                    </div>
-                </div>
-
-                <div class="options-1">
-                    <div>
-                        <p>300ml</p>
-                        <p>R$15,00</p>
-                    </div>
-
-                    <div class="icon-more">
-                        <i class="pi pi-plus"></i>
-                    </div>
-                </div>
-
-                <div class="options-1">
-                    <div>
-                        <p>300ml</p>
-                        <p>R$15,00</p>
-                    </div>
-
-                    <div class="icon-more">
-                        <i class="pi pi-plus"></i>
+                        <i class="pi pi-plus"  (click)="selecionarOption(option)"></i>
                     </div>
                 </div>
 
@@ -97,8 +43,12 @@
     <input type="text" class="custom-input" placeholder="Digite seu nome" />
     
     <div class="container-button">
-            <button class="button-number"> - <p>1</p> + </button>
-            <button class="button-adicionar">ADICIONAR R$0,00</button>
+        <div class="container-add">
+        <button class="button-number" (click)="diminuirQuantidade()">-</button>
+        <button  id="quantidade" class="button-quanty">{{ quantidade }}</button>
+        <button class="button-number2" (click)="aumentarQuantidade()">+</button>
+        </div>
+            <button class="button-adicionar" (click)="adicionarValorAoPedido()">ADICIONAR R$ {{ total.toFixed(2) }}</button>
     
     </div>
 </div>
