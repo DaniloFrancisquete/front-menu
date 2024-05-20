@@ -4,24 +4,24 @@
 
     <div class="container-text-product">
       <strong>Resumo</strong>
-      <p style="color: #f93371">LIMPAR</p>
+      <p (click)="clearCart()">LIMPAR</p>
     </div>
 
-    <div class="container-product">
+    <div class="container-product" *ngFor="let item of cartItems">
       <div class="product-description">
-        <p><strong>1 X</strong> Moda da Casa</p>
-        <strong>R$15,00</strong>
+        <p><strong>{{item.quantity}}X</strong> {{item.title}}</p>
+        <strong>R${{item.price}}</strong>
       </div>
       <div class="product-description-replic">
-        <p><strong>1 X</strong> 300ml(R$15,00)</p>
+        <p><strong>{{item.quantity}}X</strong> {{item.size}} (R${{item.price}})</p>
       </div>
       <div class="container-edit">
         <p>EDITAR</p>
-        <p class="remover">REMOVER</p>
+        <p class="remover" (click)="cartService.removeItem(item.productId); updateCart()">REMOVER</p>
       </div>
     </div>
 
-    <button class="add-button">
+    <button class="add-button" (click)="navigateToHome()">
       <p>ADICIONAR MAIS PRODUTOS</p>
     </button>
 
@@ -31,15 +31,15 @@
 
       <div class="container-sub">
         <p>Subtotal</p>
-        <p>R$15,00</p>
+        <p></p>
       </div>
       <div class="container-sub">
         <p>Total</p>
-        <p>R$19,00</p>
+        <p>R$</p>
       </div>
 
       <div class="finalize-order">
-        <a routerLink="Checkout"> FINALIZAR PEDIDO - R$19,00 </a>
+        <a routerLink="Checkout"> FINALIZAR PEDIDO - R$ </a>
       </div>
     </div>
   </mat-drawer>
@@ -461,3 +461,5 @@
     <p>codeexpress</p>
   </footer>
 </mat-drawer-container>
+
+

@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, ViewChild } from '@angular/core';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import {
@@ -12,6 +12,19 @@ import { CompanyService } from '../../app/services/company.service';
 import { ModalPedidoComponent } from '../../app/shared/modal-pedido/modal-pedido.component';
 import { ProductService } from '../../app/services/product.service';
 import { title } from 'process';
+import {CartService} from '../../app/services/cart.service'
+import { Router } from '@angular/router';
+import { MatDrawer } from '@angular/material/sidenav';
+
+interface CartItem {
+  productId: number;
+  title: string;
+  description: string;
+  size?: string;
+  option?: string;
+  price: number;
+  quantity: number;
+}
 
 @Component({
   selector: 'app-home',
@@ -29,6 +42,8 @@ import { title } from 'process';
   styleUrl: './home.component.scss',
 })
 export class HomeComponent implements OnInit {
+  @ViewChild('drawer', { static: true }) drawer: MatDrawer | undefined;
+  
   company: any;
   productsByCategory: any;
 
@@ -36,6 +51,9 @@ export class HomeComponent implements OnInit {
   selectedCategoryIndex: number = -1;
   
   cartItemCount: number = 0;
+  cartItems: CartItem[] = []; 
+
+ 
   
   onCategoria(index: number): void {
    
@@ -52,20 +70,45 @@ export class HomeComponent implements OnInit {
     }
   }
   }
-
+  
 
   constructor(
     private companyService: CompanyService,
     private productService: ProductService,
     public dialog: MatDialog,
+    public cartService: CartService,
+    private router: Router,
+  ) {
+    this.drawer = undefined;
+  }
 
-  ) {}
-
+ 
+  
 
   async ngOnInit() {
     await this.getCompanyInfo();
     await this.getProductInfo();
+    this.updateCart();
   }
+
+  navigateToHome(): void {
+    this.router.navigate(['/']); // Navega de volta para a página inicial
+    if (this.drawer) {
+      this.drawer.close(); // Fecha o navbar apenas se drawer for definido
+    }
+  }
+
+  updateCart() {
+    this.cartItems = this.cartService.getItems();
+    console.log('Cart Items:', this.cartItems); // Log the cart items
+    this.cartItemCount = this.cartItems.reduce((count, item) => count + item.quantity, 0);
+  }
+
+  clearCart() {
+    this.cartService.clearCart();
+    this.updateCart();
+  }
+
   async getCompanyInfo() {
     this.company = await this.companyService.getCompany();
   }
@@ -81,6 +124,7 @@ export class HomeComponent implements OnInit {
       });
     }
 
+  
 
     // // EXEMPLO COM FOREACH
     // this.productsByCategory?.categories.forEach(element:{ id:number, name:string } => {
@@ -116,12 +160,21 @@ export class HomeComponent implements OnInit {
          }
         }
      });
+     
 
      
      dialogRef.afterClosed().subscribe(result => {
       if (result) {
-        this.cartItemCount += result.quantity;
+        this.cartService.addToCart({
+          productId: selectedProduct.id,
+          title: selectedProduct.title,
+          description: selectedProduct.description,
+          price: selectedProduct.price,
+          quantity: result.quantity,
+        });
+        this.updateCart();
       }
+      console.log('O modal foi fechado', result);
     });
   
     
@@ -131,8 +184,19 @@ export class HomeComponent implements OnInit {
      });
    }
  }
- 
+}
 
+getCartItems(): CartItem[] {
+  return this.cartService.getItems();
+}
 
+// Public method to get cart item count for the template
+getCartItemCount(): number {
+  return this.cartItemCount;
+}
+
+// Public method to calculate the total price of items in the cart
+getCartTotal(): number {
+  return this.cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
 }
 }

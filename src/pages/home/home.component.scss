@@ -20,6 +20,10 @@
   .container-text-product{
     display: flex;
     justify-content: space-between;
+    p {
+      color: #f93371;
+      cursor: pointer;
+    }
   }
 
   .container-product{
@@ -54,6 +58,7 @@
 .remover{
   color: #F93371;
   margin-left: 16px;
+  cursor: pointer;
 }
 
 .add-button{
