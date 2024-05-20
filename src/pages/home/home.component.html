@@ -10,10 +10,10 @@
     <div class="container-product" *ngFor="let item of cartItems">
       <div class="product-description">
         <p><strong>{{item.quantity}}X</strong> {{item.title}}</p>
-        <strong>R${{item.price}}</strong>
+        <strong style="color:blue">R${{item.price}}</strong>
       </div>
       <div class="product-description-replic">
-        <p><strong>{{item.quantity}}X</strong> {{item.size}} (R${{item.price}})</p>
+        <p><strong style="color: red;">{{item.quantity}}X</strong> {{item.option}} (R${{item.price}})</p>
       </div>
       <div class="container-edit">
         <p>EDITAR</p>
@@ -95,7 +95,7 @@
   <div class="container-main">
     <div class="row">
   <!--Inicio do Produto-->
-      <div class="col-md-4" *ngFor="let itemProduct of itemCategory?.products; let i=index">
+      <div class="col-12 col-md-6 col-lg-4 mb-4" *ngFor="let itemProduct of itemCategory?.products; let i=index">
         <div class="gruop-img">
           <div class="group-text">
             <p style="font-weight: 700">{{itemProduct.title}}</p>

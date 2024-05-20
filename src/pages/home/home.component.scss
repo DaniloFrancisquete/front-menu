@@ -279,13 +279,13 @@ font-size: 10px;
 
 .gruop-img{
   display: flex;
-  gap: 79px;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   height: 166px;
   width: 100%;
   margin-bottom:15px;
+  justify-content: space-between;
 }
 
 .group-text{
@@ -346,3 +346,25 @@ font-size: 10px;
   color: white;
   margin: auto;
 }
+
+
+@media (min-width: 430px) {
+  .borde-botton{
+    width: 30%;
+    margin-left: 1%;
+    column-gap: 2;
+    cursor: pointer;
+    padding: 7px 8px 0px 2px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
