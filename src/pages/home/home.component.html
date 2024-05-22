@@ -103,7 +103,7 @@
               {{itemProduct.description}}
             </p>
             <div class="container-price">
-              <p class="price">{{itemProduct.value}}</p>
+              <p class="price">{{itemProduct.value | currency:'BRL':'symbol':'1.2-2':'pt-BR' }}</p>
             </div>
           </div>
 

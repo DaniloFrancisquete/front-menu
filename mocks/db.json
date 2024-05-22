@@ -27,20 +27,21 @@
             "id": 1,
             "title": "Moda da Casa",
             "description": "Açai, leite em pó, leite condensado, creme de avelã, confete, morango e banana.",
-            "value":"a partir de R$16,00",
+            "text":"a partir de",
+            "value":16,
             "img":"assets/0000734f-34a6-46a6-bccb-28692ec2b5f4-medium.jpg",
             "options": [
               {
                 "ml": "300ml",
-                "valueml": "R$15,00"
+                "valueml": 15
               },
               {
                 "ml": "500ml",
-                "valueml": "R$20,00"
+                "valueml": 20
               },
               {
                 "ml": "700ml",
-                "valueml": "R$25,00"
+                "valueml": 25
               }
             ],
             "size":"ESCOLHA O TAMANHO",
@@ -51,20 +52,21 @@
             "id": 2,
             "title": "Tropical",
             "description": "Açai,canela, creme de avelã, confete, morango e banana.",
-            "value":"a partir de R$18,00",
+            "text":"a partir de",
+            "value":20,
             "img":"assets/857f9a5ece01583d358e4edacb1e50d5.jpg",
             "options": [
               {
                 "ml": "300ml",
-                "valueml": "R$15,00"
+                "valueml": 15
               },
               {
                 "ml": "500ml",
-                "valueml": "R$20,00"
+                "valueml": 20
               },
               {
                 "ml": "700ml",
-                "valueml": "R$25,00"
+                "valueml": 25
               }
             ],
             "size":"ESCOLHA O TAMANHO",
@@ -75,20 +77,21 @@
             "id": 3,
             "title": "Ovomaltine",
             "description": "Açai,ovomaltine,creme de avelã,morango e leite condensado.",
-            "value":"a partir de R$19,00",
+            "text":"a partir de",
+            "value":25,
             "img":"assets/c3817ef5-5c4d-4840-8ea6-70fb120a4253-medium.jpg",
             "options": [
               {
                 "ml": "300ml",
-                "valueml": "R$15,00"
+                "valueml": 15
               },
               {
                 "ml": "500ml",
-                "valueml": "R$20,00"
+                "valueml": 20
               },
               {
                 "ml": "700ml",
-                "valueml": "R$25,00"
+                "valueml": 25
               }
             ],
             "size":"ESCOLHA O TAMANHO",
@@ -99,20 +102,21 @@
             "id": 4,
             "title": "Moda da Casa 2",
             "description": "Açai, leite em pó, leite condensado, creme de avelã, confete, morango e banana.",
-            "value":"a partir de R$16,00",
+            "text":"a partir de",
+            "value":30,
             "img":"assets/0000734f-34a6-46a6-bccb-28692ec2b5f4-medium.jpg",
             "options": [
               {
                 "ml": "300ml",
-                "valueml": "R$15,00"
+                "valueml": 15
               },
               {
                 "ml": "500ml",
-                "valueml": "R$20,00"
+                "valueml": 20
               },
               {
                 "ml": "700ml",
-                "valueml": "R$25,00"
+                "valueml": 25
               }
             ],
             "size":"ESCOLHA O TAMANHO",
@@ -129,20 +133,20 @@
             "id": 1,
             "title": "Tigela 300ml",
             "description": "Escolha seus adicionais",
-            "value":"R$7,00",
+            "value":7,
             "img":"assets/mamirtapequena.jpg",
             "options": [
               {
                 "ml": "Leite em pó",
-                "valueml": "R$3,00"
+                "valueml": 3
               },
               {
                 "ml": "Leite condesando",
-                "valueml": "R$4,00"
+                "valueml":4
               },
               {
                 "ml": "Creme de avelã",
-                "valueml": "R$4,00"
+                "valueml": 4
               }
             ],
             "size":"INGREDIENTES",
@@ -153,20 +157,20 @@
             "id": 2,
             "title": "Tigela Grande",
             "description": "Escolha seus adicionais.",
-            "value":"R$10,00",
+            "value":10,
             "img":"assets/marmitagrnade.jpg",
             "options": [
               {
                 "ml": "Leite em pó",
-                "valueml": "R$3,00"
+                "valueml": 3
               },
               {
                 "ml": "Leite condesando",
-                "valueml": "R$4,00"
+                "valueml": 4
               },
               {
                 "ml": "Creme de avelã",
-                "valueml": "R$4,00"
+                "valueml": 4
               }
             ],
             "size":"INGREDIENTES",
@@ -178,20 +182,20 @@
             "id": 3,
             "title": "Copo 240ml",
             "description": "Escolha seus adicionais.",
-            "value":"R$5,00",
+            "value":5,
             "img":"assets/copoacai.jpg",
             "options": [
               {
                 "ml": "Leite em pó",
-                "valueml": "R$3,00"
+                "valueml": 3
               },
               {
                 "ml": "Leite condesando",
-                "valueml": "R$4,00"
+                "valueml": 4
               },
               {
                 "ml": "Creme de avelã",
-                "valueml": "R$4,00"
+                "valueml": 4
               }
             ],
             "size":"INGREDIENTES",
@@ -208,14 +212,14 @@
             "id": 1,
             "title": "Coca-Cola 200ml",
             "description": "",
-            "value":"R$2,00",
+            "value":2,
             "img":"assets/cocapequena.jpg"
           },
           {
             "id": 2,
             "title": "Agua sem gás",
             "description": "",
-            "value":"R$2,90",
+            "value":2.90,
             "img":"assets/agua.jpg"
             
           },
@@ -223,7 +227,7 @@
             "id": 3,
             "title": "Refligerante 2l",
             "description": "",
-            "value":"R$12,00",
+            "value":12,
             "img":"assets/guarara.jpg"
             
           }

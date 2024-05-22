@@ -24,7 +24,7 @@
                 <div *ngFor="let option of data.selectedProduct.options" class="options-1">
                     <div>
                         <p>{{ option.ml }}</p>
-                        <p>{{ option.valueml  }}</p>
+                        <p>{{ option.valueml | currency:'BRL':'symbol':'1.2-2':'pt-BR'  }}</p>
                     </div>
 
                     <div class="icon-more">
@@ -48,7 +48,7 @@
         <button  id="quantidade" class="button-quanty">{{ quantidade }}</button>
         <button class="button-number2" (click)="aumentarQuantidade()">+</button>
         </div>
-            <button class="button-adicionar" (click)="adicionarValorAoPedido()">ADICIONAR R$ {{ total.toFixed(2) }}</button>
+            <button class="button-adicionar" (click)="adicionarValorAoPedido()">ADICIONAR{{ total }}</button>
     
     </div>
 </div>

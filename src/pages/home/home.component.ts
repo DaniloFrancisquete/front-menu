@@ -15,6 +15,11 @@ import { title } from 'process';
 import {CartService} from '../../app/services/cart.service'
 import { Router } from '@angular/router';
 import { MatDrawer } from '@angular/material/sidenav';
+import { CurrencyPipe } from '@angular/common';
+import { registerLocaleData } from '@angular/common';
+import localePt from '@angular/common/locales/pt';
+
+registerLocaleData(localePt, 'pt-BR');
 
 interface CartItem {
   productId: number;
@@ -38,6 +43,7 @@ interface CartItem {
     CommonModule,
     RouterOutlet,
   ],
+  providers: [CurrencyPipe],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
@@ -53,7 +59,8 @@ export class HomeComponent implements OnInit {
   cartItemCount: number = 0;
   cartItems: CartItem[] = []; 
 
- 
+  itemProduct = { value: 1234.56 };
+  transformedValue:  string = '';
   
   onCategoria(index: number): void {
    
@@ -78,8 +85,10 @@ export class HomeComponent implements OnInit {
     public dialog: MatDialog,
     public cartService: CartService,
     private router: Router,
+    private currencyPipe: CurrencyPipe
   ) {
     this.drawer = undefined;
+    const transformedValue = this.currencyPipe.transform(this.itemProduct.value, 'BRL', 'symbol', '1.2-2', 'pt-BR') ?? '';
   }
 
  
