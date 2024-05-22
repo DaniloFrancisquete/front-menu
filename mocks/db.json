@@ -8,228 +8,245 @@
       "neighborhood": "Centro",
       "city": "Lonrina",
       "state": "PR",
-      "week":"Seg á Dom",
-      "time":"18:00 as 22:00",
-      "delivery":"20-45min",
-      "order":"Mínimo R$10,00",
-      "more":"Ver mais"
-
-      
+      "week": "Seg á Dom",
+      "time": "18:00 as 22:00",
+      "delivery": "20-45min",
+      "order": "Mínimo R$10,00",
+      "more": "Ver mais"
     }
   },
   "productsByCategory": {
     "categories": [
       {
-        "id":1,
+        "id": 1,
         "name": "AÇAI ESPECIAIS",
         "products": [
           {
             "id": 1,
             "title": "Moda da Casa",
             "description": "Açai, leite em pó, leite condensado, creme de avelã, confete, morango e banana.",
-            "text":"a partir de",
-            "value":16,
-            "img":"assets/0000734f-34a6-46a6-bccb-28692ec2b5f4-medium.jpg",
+            "text": "a partir de",
+            "value": 16,
+            "img": "assets/0000734f-34a6-46a6-bccb-28692ec2b5f4-medium.jpg",
+            "size": "ESCOLHA O TAMANHO",
+            "option": "Escolha 1 Opção.",
+            "mandatory": "Obrigatório",
+            "type": "QuantidadeTipo",
             "options": [
               {
-                "ml": "300ml",
-                "valueml": 15
+                "measure": "ml",
+                "value": "300",
+                "sale_value": 15
               },
               {
-                "ml": "500ml",
-                "valueml": 20
+                "measure": "ml",
+                "value": "500",
+                "sale_value": 20
               },
               {
-                "ml": "700ml",
-                "valueml": 25
+                "measure": "ml",
+                "value": "700",
+                "sale_value": 25
               }
-            ],
-            "size":"ESCOLHA O TAMANHO",
-            "option":"Escolha 1 Opção.",
-            "mandatory":"Obrigatório"
+            ]
           },
           {
             "id": 2,
             "title": "Tropical",
-            "description": "Açai,canela, creme de avelã, confete, morango e banana.",
-            "text":"a partir de",
-            "value":20,
-            "img":"assets/857f9a5ece01583d358e4edacb1e50d5.jpg",
+            "description": "Açai, canela, creme de avelã, confete, morango e banana.",
+            "text": "a partir de",
+            "value": 20,
+            "img": "assets/857f9a5ece01583d358e4edacb1e50d5.jpg",
             "options": [
               {
-                "ml": "300ml",
-                "valueml": 15
+                "measure": "ml",
+                "value": "300",
+                "sale_value": 15
               },
               {
-                "ml": "500ml",
-                "valueml": 20
+                "measure": "ml",
+                "value": "500",
+                "sale_value": 20
               },
               {
-                "ml": "700ml",
-                "valueml": 25
+                "measure": "ml",
+                "value": "700",
+                "sale_value": 25
               }
             ],
-            "size":"ESCOLHA O TAMANHO",
-            "option":"Escolha 1 Opção.",
-            "mandatory":"Obrigatório"
+            "size": "ESCOLHA O TAMANHO",
+            "option": "Escolha 1 Opção.",
+            "mandatory": "Obrigatório"
           },
           {
             "id": 3,
             "title": "Ovomaltine",
-            "description": "Açai,ovomaltine,creme de avelã,morango e leite condensado.",
-            "text":"a partir de",
-            "value":25,
-            "img":"assets/c3817ef5-5c4d-4840-8ea6-70fb120a4253-medium.jpg",
+            "description": "Açai, ovomaltine, creme de avelã, morango e leite condensado.",
+            "text": "a partir de",
+            "value": 25,
+            "img": "assets/c3817ef5-5c4d-4840-8ea6-70fb120a4253-medium.jpg",
             "options": [
               {
-                "ml": "300ml",
-                "valueml": 15
+                "measure": "ml",
+                "value": "300",
+                "sale_value": 15
               },
               {
-                "ml": "500ml",
-                "valueml": 20
+                "measure": "ml",
+                "value": "500",
+                "sale_value": 20
               },
               {
-                "ml": "700ml",
-                "valueml": 25
+                "measure": "ml",
+                "value": "700",
+                "sale_value": 25
               }
             ],
-            "size":"ESCOLHA O TAMANHO",
-            "option":"Escolha 1 Opção.",
-            "mandatory":"Obrigatório"
+            "size": "ESCOLHA O TAMANHO",
+            "option": "Escolha 1 Opção.",
+            "mandatory": "Obrigatório"
           },
           {
             "id": 4,
             "title": "Moda da Casa 2",
             "description": "Açai, leite em pó, leite condensado, creme de avelã, confete, morango e banana.",
-            "text":"a partir de",
-            "value":30,
-            "img":"assets/0000734f-34a6-46a6-bccb-28692ec2b5f4-medium.jpg",
+            "text": "a partir de",
+            "value": 30,
+            "img": "assets/0000734f-34a6-46a6-bccb-28692ec2b5f4-medium.jpg",
             "options": [
               {
-                "ml": "300ml",
-                "valueml": 15
+                "measure": "ml",
+                "value": "300",
+                "sale_value": 15
               },
               {
-                "ml": "500ml",
-                "valueml": 20
+                "measure": "ml",
+                "value": "500",
+                "sale_value": 20
               },
               {
-                "ml": "700ml",
-                "valueml": 25
+                "measure": "ml",
+                "value": "700",
+                "sale_value": 25
               }
             ],
-            "size":"ESCOLHA O TAMANHO",
-            "option":"Escolha 1 Opção.",
-            "mandatory":"Obrigatório"
+            "size": "ESCOLHA O TAMANHO",
+            "option": "Escolha 1 Opção.",
+            "mandatory": "Obrigatório"
           }
         ]
       },
       {
-        "id":2,
+        "id": 2,
         "name": "AÇAI (MONTE DO SEU JEITO)",
         "products": [
           {
             "id": 1,
             "title": "Tigela 300ml",
             "description": "Escolha seus adicionais",
-            "value":7,
-            "img":"assets/mamirtapequena.jpg",
+            "value": 7,
+            "img": "assets/mamirtapequena.jpg",
             "options": [
               {
-                "ml": "Leite em pó",
-                "valueml": 3
+                "measure": "Leite em pó",
+                "value": "3",
+                "sale_value": 3
               },
               {
-                "ml": "Leite condesando",
-                "valueml":4
+                "measure": "Leite condesando",
+                "value": "4",
+                "sale_value": 4
               },
               {
-                "ml": "Creme de avelã",
-                "valueml": 4
+                "measure": "Creme de avelã",
+                "value": "4",
+                "sale_value": 4
               }
             ],
-            "size":"INGREDIENTES",
-            "option":"Escolha 6 opções.",
-            "mandatory":"Obrigatório"
+            "size": "INGREDIENTES",
+            "option": "Escolha 6 opções.",
+            "mandatory": "Obrigatório"
           },
           {
             "id": 2,
             "title": "Tigela Grande",
             "description": "Escolha seus adicionais.",
-            "value":10,
-            "img":"assets/marmitagrnade.jpg",
+            "value": 10,
+            "img": "assets/marmitagrnade.jpg",
             "options": [
               {
-                "ml": "Leite em pó",
-                "valueml": 3
+                "measure": "Leite em pó",
+                "value": "3",
+                "sale_value": 3
               },
               {
-                "ml": "Leite condesando",
-                "valueml": 4
+                "measure": "Leite condesando",
+                "value": "4",
+                "sale_value": 4
               },
               {
-                "ml": "Creme de avelã",
-                "valueml": 4
+                "measure": "Creme de avelã",
+                "value": "4",
+                "sale_value": 4
               }
             ],
-            "size":"INGREDIENTES",
-            "option":"Escolha 6 opções.",
-            "mandatory":"Obrigatório"
-            
+            "size": "INGREDIENTES",
+            "option": "Escolha 6 opções.",
+            "mandatory": "Obrigatório"
           },
           {
             "id": 3,
             "title": "Copo 240ml",
             "description": "Escolha seus adicionais.",
-            "value":5,
-            "img":"assets/copoacai.jpg",
+            "value": 5,
+            "img": "assets/copoacai.jpg",
             "options": [
               {
-                "ml": "Leite em pó",
-                "valueml": 3
+                "measure": "Leite em pó",
+                "value": "3",
+                "sale_value": 3
               },
               {
-                "ml": "Leite condesando",
-                "valueml": 4
+                "measure": "Leite condesando",
+                "value": "4",
+                "sale_value": 4
               },
               {
-                "ml": "Creme de avelã",
-                "valueml": 4
+                "measure": "Creme de avelã",
+                "value": "4",
+                "sale_value": 4
               }
             ],
-            "size":"INGREDIENTES",
-            "option":"Escolha 6 opções.",
-            "mandatory":"Obrigatório"
+            "size": "INGREDIENTES",
+            "option": "Escolha 6 opções.",
+            "mandatory": "Obrigatório"
           }
         ]
       },
       {
-        "id":3,
+        "id": 3,
         "name": "BEBIDAS GELADAS",
         "products": [
           {
             "id": 1,
             "title": "Coca-Cola 200ml",
             "description": "",
-            "value":2,
-            "img":"assets/cocapequena.jpg"
+            "value": 2,
+            "img": "assets/cocapequena.jpg"
           },
           {
             "id": 2,
             "title": "Agua sem gás",
             "description": "",
-            "value":2.90,
-            "img":"assets/agua.jpg"
-            
+            "value": 2.9,
+            "img": "assets/agua.jpg"
           },
           {
             "id": 3,
             "title": "Refligerante 2l",
             "description": "",
-            "value":12,
-            "img":"assets/guarara.jpg"
-            
+            "value": 12,
+            "img": "assets/guarara.jpg"
           }
         ]
       }
