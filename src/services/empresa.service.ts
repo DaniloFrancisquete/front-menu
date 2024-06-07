@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class EmpresaService {
-  private apiUrl = 'http://localhost:3000/api/empresas';
+  private apiUrl = 'http://localhost:3001/api/empresas';
 
   constructor(private http: HttpClient) {}
 
@@ -15,6 +15,7 @@ export class EmpresaService {
   }
 
   getEmpresa(id: number): Observable<any> {
+    console.log('id');
     return this.http.get<any>(`${this.apiUrl}/${id}`);
   }
 

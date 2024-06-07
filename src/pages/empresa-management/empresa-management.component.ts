@@ -4,12 +4,12 @@ import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule, MatDialog } from '@angular/material/dialog';
+import { MatMenuModule } from '@angular/material/menu';
 import { HttpClientModule } from '@angular/common/http';
-// import { EmpresaService } from '../services/empresa.service';
-import { MatSnackBarModule, MatSnackBar } from '@angular/material/snack-bar';
-import { EmpresaFormDialogComponent } from '../../empresa-form-dialog/empresa-form-dialog.component';
 import { EmpresaService } from '../../services/empresa.service';
-// import { EmpresaFormDialogComponent } from '../empresa-form-dialog/empresa-form-dialog.component';
+import { MatSnackBarModule, MatSnackBar } from '@angular/material/snack-bar';
+import { RouterModule } from '@angular/router';
+import { EmpresaFormDialogComponent } from '../../empresa-form-dialog/empresa-form-dialog.component';
 
 @Component({
   selector: 'app-empresa-management',
@@ -20,8 +20,10 @@ import { EmpresaService } from '../../services/empresa.service';
     MatButtonModule,
     MatIconModule,
     MatDialogModule,
+    MatMenuModule,
     HttpClientModule,
     MatSnackBarModule,
+    RouterModule,
     EmpresaFormDialogComponent,
   ],
   templateUrl: './empresa-management.component.html',
