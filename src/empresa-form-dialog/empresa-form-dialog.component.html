@@ -1,0 +1,21 @@
+<h1 mat-dialog-title>
+  {{ empresaForm.value.id ? "Editar Empresa" : "Nova Empresa" }}
+</h1>
+<div mat-dialog-content>
+  <form [formGroup]="empresaForm">
+    <mat-form-field appearance="fill">
+      <mat-label>Nome</mat-label>
+      <input matInput formControlName="nome" required />
+      <mat-error *ngIf="empresaForm.get('nome')?.hasError('required')"
+        >Nome é obrigatório</mat-error
+      >
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-checkbox formControlName="ativa">Ativa</mat-checkbox>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Cancelar</button>
+  <button mat-button (click)="onSave()">Salvar</button>
+</div>
