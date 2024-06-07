@@ -12,7 +12,7 @@ import { CompanyService } from '../../app/services/company.service';
 import { ModalPedidoComponent } from '../../app/shared/modal-pedido/modal-pedido.component';
 import { ProductService } from '../../app/services/product.service';
 import { title } from 'process';
-import {CartService} from '../../app/services/cart.service'
+import { CartService } from '../../app/services/cart.service';
 import { Router } from '@angular/router';
 import { MatDrawer } from '@angular/material/sidenav';
 import { CurrencyPipe } from '@angular/common';
@@ -49,35 +49,36 @@ interface CartItem {
 })
 export class HomeComponent implements OnInit {
   @ViewChild('drawer', { static: true }) drawer: MatDrawer | undefined;
-  
+
   company: any;
   productsByCategory: any;
 
-  categoriesTitle: { id: number, name: string}[] = [];
+  categoriesTitle: { id: number; name: string }[] = [];
   selectedCategoryIndex: number = -1;
-  
+
   cartItemCount: number = 0;
-  cartItems: CartItem[] = []; 
+  cartItems: CartItem[] = [];
 
   itemProduct = { value: 1234.56 };
-  transformedValue:  string = '';
-  
+  transformedValue: string = '';
+
   onCategoria(index: number): void {
-   
-  if (index >= 0 && index < this.categoriesTitle.length) {
-    this.selectedCategoryIndex = index;
-    const selectedCategoryId = this.categoriesTitle[index].id;
-    const selectedCategory = this.productsByCategory.categories.find((category: { id: number }) => category.id === selectedCategoryId);
-    if (selectedCategory) {
-      const indexToRemove = this.productsByCategory.categories.indexOf(selectedCategory);
-      if (indexToRemove !== -1) {
-        this.productsByCategory.categories.splice(indexToRemove, 1);
+    if (index >= 0 && index < this.categoriesTitle.length) {
+      this.selectedCategoryIndex = index;
+      const selectedCategoryId = this.categoriesTitle[index].id;
+      const selectedCategory = this.productsByCategory.categories.find(
+        (category: { id: number }) => category.id === selectedCategoryId
+      );
+      if (selectedCategory) {
+        const indexToRemove =
+          this.productsByCategory.categories.indexOf(selectedCategory);
+        if (indexToRemove !== -1) {
+          this.productsByCategory.categories.splice(indexToRemove, 1);
+        }
+        this.productsByCategory.categories.unshift(selectedCategory);
       }
-      this.productsByCategory.categories.unshift(selectedCategory);
     }
   }
-  }
-  
 
   constructor(
     private companyService: CompanyService,
@@ -88,16 +89,20 @@ export class HomeComponent implements OnInit {
     private currencyPipe: CurrencyPipe
   ) {
     this.drawer = undefined;
-    const transformedValue = this.currencyPipe.transform(this.itemProduct.value, 'BRL', 'symbol', '1.2-2', 'pt-BR') ?? '';
+    const transformedValue =
+      this.currencyPipe.transform(
+        this.itemProduct.value,
+        'BRL',
+        'symbol',
+        '1.2-2',
+        'pt-BR'
+      ) ?? '';
   }
 
- 
-  
-
   async ngOnInit() {
-    await this.getCompanyInfo();
-    await this.getProductInfo();
-    this.updateCart();
+    // await this.getCompanyInfo();
+    // await this.getProductInfo();
+    // this.updateCart();
   }
 
   navigateToHome(): void {
@@ -110,7 +115,10 @@ export class HomeComponent implements OnInit {
   updateCart() {
     this.cartItems = this.cartService.getItems();
     console.log('Cart Items:', this.cartItems); // Log the cart items
-    this.cartItemCount = this.cartItems.reduce((count, item) => count + item.quantity, 0);
+    this.cartItemCount = this.cartItems.reduce(
+      (count, item) => count + item.quantity,
+      0
+    );
   }
 
   clearCart() {
@@ -126,14 +134,16 @@ export class HomeComponent implements OnInit {
     this.productsByCategory = await this.productService.getProducts();
 
     //EXEMPLO COM FOR
-    for (let index = 0; index < this.productsByCategory?.categories.length; index++) {
+    for (
+      let index = 0;
+      index < this.productsByCategory?.categories.length;
+      index++
+    ) {
       this.categoriesTitle.push({
         id: this.productsByCategory?.categories[index].id,
         name: this.productsByCategory?.categories[index].name,
       });
     }
-
-  
 
     // // EXEMPLO COM FOREACH
     // this.productsByCategory?.categories.forEach(element:{ id:number, name:string } => {
@@ -141,71 +151,68 @@ export class HomeComponent implements OnInit {
     //     id: element.id,
     //     name: element.name
     //   });
-      
+
     // });
     console.log(this.categoriesTitle);
   }
 
-  openDialog(categoryId:number,productId: number,):void {
- 
- const selectedCategory = this.productsByCategory.categories.find((category: { id: number }) => category.id === categoryId);
-  
- 
- if (selectedCategory) {
- 
-   const selectedProduct = selectedCategory.products.find((product: { id: number }) => product.id === productId);
+  openDialog(categoryId: number, productId: number): void {
+    const selectedCategory = this.productsByCategory.categories.find(
+      (category: { id: number }) => category.id === categoryId
+    );
 
- 
-   if (selectedProduct) {
-    
-     const dialogRef = this.dialog.open(ModalPedidoComponent, {
-       data: {
-         selectedProduct: selectedProduct,
-         selectedCategory:{
-          id: selectedCategory.id,
-            title: selectedCategory.title, 
-            description: selectedCategory.description
-            
-         }
-        }
-     });
-     
+    if (selectedCategory) {
+      const selectedProduct = selectedCategory.products.find(
+        (product: { id: number }) => product.id === productId
+      );
 
-     
-     dialogRef.afterClosed().subscribe(result => {
-      if (result) {
-        this.cartService.addToCart({
-          productId: selectedProduct.id,
-          title: selectedProduct.title,
-          description: selectedProduct.description,
-          price: selectedProduct.price,
-          quantity: result.quantity,
+      if (selectedProduct) {
+        const dialogRef = this.dialog.open(ModalPedidoComponent, {
+          data: {
+            selectedProduct: selectedProduct,
+            selectedCategory: {
+              id: selectedCategory.id,
+              title: selectedCategory.title,
+              description: selectedCategory.description,
+            },
+          },
         });
-        this.updateCart();
+
+        dialogRef.afterClosed().subscribe((result) => {
+          if (result) {
+            this.cartService.addToCart({
+              productId: selectedProduct.id,
+              title: selectedProduct.title,
+              description: selectedProduct.description,
+              price: selectedProduct.price,
+              quantity: result.quantity,
+            });
+            this.updateCart();
+          }
+          console.log('O modal foi fechado', result);
+        });
+
+        dialogRef.afterClosed().subscribe((result) => {
+          console.log('O modal foi fechado', result);
+        });
       }
-      console.log('O modal foi fechado', result);
-    });
-  
-    
-   
-     dialogRef.afterClosed().subscribe(result => {
-       console.log('O modal foi fechado', result);
-     });
-   }
- }
-}
+    }
+  }
 
-getCartItems(): CartItem[] {
-  return this.cartService.getItems();
-}
+  getCartItems(): CartItem[] {
+    return this.cartService.getItems();
+  }
 
-// Public method to get cart item count for the template
-getCartItemCount(): number {
-  return this.cartItemCount;
-}
+  // Public method to get cart item count for the template
+  getCartItemCount(): number {
+    return this.cartItemCount;
+  }
 
-// Public method to calculate the total price of items in the cart
-getCartTotal(): number {
-  return this.cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
-}
+  // Public method to calculate the total price of items in the cart
+  getCartTotal(): number {
+    return this.cartItems.reduce(
+      (total, item) => total + item.price * item.quantity,
+      0
+    );
+  }
 }
